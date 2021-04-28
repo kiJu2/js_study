@@ -28,4 +28,15 @@ function scope_hoisting(){
   }
 }
 
-scope_hoisting()
+function 순서(){
+  console.log(a)
+  console.log(b)
+  console.log(c)
+
+  var a = 1
+  var b = a
+  var c = b
+}
+
+// scope_hoisting()
+순서()
