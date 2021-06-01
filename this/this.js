@@ -75,8 +75,33 @@
 // var o = new obj("???");
 // console.log(o.name);
 
-function b(){
-  a= 1;
+// function b(){
+//   a= 1;
+// }
+// b();
+// console.log(a)
+
+var value = 1;
+var obj = function(){
+  this.a = 0;
+  // this.fn = function(){console.log(this)};
+
+  function foo(){
+    console.log(this);
+  }
+  this.fn = function(){foo()};
 }
-b();
-console.log(a)
+var a = new obj();
+a.fn();
+// console.log(a);
+// var obj = {
+//   value: 100,
+//   foo: function() {
+//     setTimeout(function() {
+//       console.log("callback's this: ",  this);  // window
+//       console.log("callback's this.value: ",  this.value); // 1
+//     }, 100);
+//   }
+// };
+// ㄴ
+// obj.foo();
